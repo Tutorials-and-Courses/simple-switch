@@ -1,9 +1,9 @@
-import React, { useEffect } from 'react';
-export default function Toggle({ value, onClick }) {
-  const toggleClass = value ? 'toggleContainer on' : 'toggleContainer';
+import React, { useEffect } from "react";
+export default function Toggle({ value, onToggleSwitchClick }: ToggleProps) {
+  const toggleClass = value ? "toggleContainer on" : "toggleContainer";
 
   return (
-    <div onClick={onClick} className={toggleClass}>
+    <div onClick={onToggleSwitchClick} className={toggleClass}>
       <div className="switchCircle">
         {value && (
           <svg
@@ -22,4 +22,9 @@ export default function Toggle({ value, onClick }) {
       </div>
     </div>
   );
+}
+
+interface ToggleProps {
+  value: boolean;
+  onToggleSwitchClick(): void;
 }
