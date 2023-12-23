@@ -1,0 +1,29 @@
+.toggleContainer {
+  width: 48px;
+  height: 24px;
+  background-color: gray;
+  border-radius: 20px;
+  position: relative;
+}
+
+.toggleContainer.on {
+  background-color: orange;
+}
+
+.switchCircle {
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: left 0.3s;
+}
+
+.toggleContainer.on .switchCircle {
+  left: 24px; /* Move to the right when toggled on */
+}
